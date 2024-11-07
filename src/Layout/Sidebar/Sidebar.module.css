@@ -1,0 +1,43 @@
+.sidebar {
+    padding: 10px;
+
+    width: 200px;
+    height: 100vh;
+    background-color: #171717;
+    color: #FCFCFB;
+}
+
+.appName {
+    text-align: center;
+}
+
+.list {
+    margin: 20px 0;
+
+    text-decoration: none;
+    display: flex;
+    color: #FCFCFB;
+
+    align-items: center;
+}
+
+.listIcon {
+    padding: 0 10px;
+
+    flex: 30%;
+    display: grid;
+    place-items: center;
+
+    max-width: 32px;
+
+}
+
+.listIcon img{
+    width: 100%;
+}
+
+.listTitle {
+    padding: 0 10px;
+
+    flex: 70%;
+}
