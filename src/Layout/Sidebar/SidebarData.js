@@ -1,14 +1,34 @@
+
+import Cards from "../../assets/icons/Cards.png"
+import Flag_On_Ground from "../../assets/icons/Flag_On_Ground.png"
+import Power_Button from "../../assets/icons/Power_Button.png"
+
+//To see all tournaments, playgrounds and book
 let sidebarData = [
     {
         "path" : "/tournaments",
         "title" : "Tournament",
-        "icon" : "https://cdn-icons-png.flaticon.com/512/11167/11167978.png"
+        "icon" : Cards
     },
     {
         "path" : "/playgrounds",
         "title" : "Playgrounds",
-        "icon" : "https://cdn-icons-png.flaticon.com/512/6409/6409685.png"
+        "icon" : Flag_On_Ground
     }
 ]
 
-export default sidebarData
+// To host tournaments and playgrounds by users
+let hostData = [
+    {
+        "path" : "/hosttournament",
+        "title" : "Host Tournament",
+        "icon" : Cards
+    },
+    {
+        "path" : "/hostplaygrounds",
+        "title" : "Host Playgrounds",
+        "icon" : Flag_On_Ground
+    }
+]
+
+export {sidebarData, hostData}

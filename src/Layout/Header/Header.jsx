@@ -3,7 +3,7 @@ import Style from "./Header.module.css"
 function Header(){
     return(
         <div className={Style.header}>
-            <p>Dominate with your gameplay</p>
+            <p>Dominate your gameplay</p>
         </div>
     )
 }
