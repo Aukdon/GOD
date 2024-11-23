@@ -6,6 +6,7 @@ import Tournaments from "../Pages/Tournaments.jsx"
 import Playgrounds from "../Pages/Playgrounds.jsx"
 import HostTournaments from "../Pages/HostTournaments.jsx"
 import HostPlaygrounds from "../Pages/HostPlaygrounds.jsx"
+import TournamentDetails from "../Pages/TournamentDetails.jsx"
 
 function AppRoutes(){
     return(
@@ -18,6 +19,7 @@ function AppRoutes(){
                         <Route path="/playgrounds" element={<Playgrounds/>} />
                         <Route path="/hosttournament" element={<HostTournaments/>} />
                         <Route path="/hostplaygrounds" element={<HostPlaygrounds/>} />
+                        <Route path="/tournamentId/:id" element={<TournamentDetails/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
