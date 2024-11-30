@@ -1,3 +1,7 @@
+.link{
+    text-decoration: none;
+    color: #171717;
+}
 
 .card {
 
@@ -13,7 +17,7 @@
 
 .card button {
     padding: 10px;
-    /* margin-left: auto; */
+    margin-left: 20px;
 
     max-width: 100px;
 
@@ -53,4 +57,33 @@
 
 .textRight{
     text-align: right;
+}
+
+
+@media screen and (max-width:1024px) {
+    .card {
+
+        margin: 10px;
+        padding: 10px;
+    
+        border: 1px solid #171717;
+        border-radius: 10px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .imgContainer img {
+        max-width: 300px;
+    }
+
+    .detailsContainer {
+        margin: 10px;
+
+        row-gap: 20px;
+        align-items: center;
+    }
+
+    .textCenter {
+        margin: 20px 0;
+    }
 }

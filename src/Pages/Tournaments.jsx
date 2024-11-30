@@ -20,7 +20,7 @@ function Tournaments(){
 
 
     return(
-        <div className={Styles.container}>
+        <div className={`${Styles.container}`}>
             {allTournaments.map((data)=>(
                 <TournamentCard data ={data}  key={data.tournamentId}/>
             ))}

@@ -1,0 +1,40 @@
+p {
+    margin: 0;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    max-width: 800px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.signUp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUp button {
+    background-color: #824ACA;
+    color: #fff;
+}
+
+.signIn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button:hover {
+    border: 1px solid #171717;
+}

@@ -8,7 +8,7 @@ function Layout() {
     return(
         <div className={Style.layout}>
             
-            <div>
+            <div className={Style.sidebarContainer}>
                 <Sidebar/>
             </div>
 

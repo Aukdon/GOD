@@ -7,13 +7,18 @@ import Playgrounds from "../Pages/Playgrounds.jsx"
 import HostTournaments from "../Pages/HostTournaments.jsx"
 import HostPlaygrounds from "../Pages/HostPlaygrounds.jsx"
 import TournamentDetails from "../Pages/TournamentDetails.jsx"
+import SignIn from "../Authentication/SignIn.jsx"
+import SignUp from "../Authentication/SignUp.jsx"
+import PasswordReset from "../Authentication/PasswordReset.jsx"
+
+import ProtectedRouter from "../Authentication/ProtectedRoutes.jsx"
 
 function AppRoutes(){
     return(
         <div>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Layout/>}>
+                    <Route path="/" element={<ProtectedRouter component={<Layout/>}/>}>
                         <Route index element={<Tournaments/>}/>
                         <Route path="/tournaments" element={<Tournaments/>} />
                         <Route path="/playgrounds" element={<Playgrounds/>} />
@@ -21,6 +26,9 @@ function AppRoutes(){
                         <Route path="/hostplaygrounds" element={<HostPlaygrounds/>} />
                         <Route path="/tournamentId/:id" element={<TournamentDetails/>} />
                     </Route>
+                    <Route path="/signin" element={<SignIn/>} />
+                    <Route path="/signup" element={<SignUp/>} />
+                    <Route path="/passwordreset" element={<PasswordReset/>} />
                 </Routes>
             </BrowserRouter>
         </div>

@@ -2,7 +2,7 @@
 import Styles from "./TournamentDetails.module.css";
 import ShoeImg from "../assets/images/Shoe.png"
 import ControllerImg from "../assets/images/Controller.png"
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 function TournamentDetails(){
@@ -12,6 +12,10 @@ function TournamentDetails(){
     let location = useLocation();
     let data = location.state;
     // console.log(data)
+
+    function handleBuy(){
+        alert("Redirect to payment");
+    }
 
     return(
         <div className={`${Styles.card} ${Styles.div}`}>
@@ -24,15 +28,19 @@ function TournamentDetails(){
                     <p className={Styles.textRight}>{data.tournamentDetails.date}</p>
                     <p>{data.hostName}</p>
                     <p className={Styles.textRight}>{data.tournamentDetails.time || "Time"}</p>
+                    <p>{data.tournamentDetails.totalSlots - data.tournamentDetails.slotsBooked} slots available</p>
+                    <p className={Styles.textRight}>Total slots: {data.tournamentDetails.totalSlots || "-"}</p>
+
                 </div>
                 
                 <p>{data.tournamentDetails.description}</p>
             </div>
-            <p className={`${Styles.textCenter}`}>{data.tournamentDetails.pricePerSlot}/slot</p>
+            <p className={`${Styles.textCenter}`}>Price {data.tournamentDetails.pricePerSlot}/slot</p>
             <div className={Styles.detailsContainer}>
                 <p>Category : {data.tournamentType}</p>
                 <div className={Styles.textRight}>
-                    <button>Buy Now</button>
+                    <Link to="/tournaments" className={Styles.link}>Close</Link>
+                    <button onClick={handleBuy}>Buy Now</button>
                 </div>
                 
             </div>

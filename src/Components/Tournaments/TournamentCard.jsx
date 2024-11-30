@@ -5,6 +5,8 @@ import ControllerImg from "../../assets/images/Controller.png"
 import { Link } from "react-router-dom"
 
 function TournamentCard({data}){
+
+    // console.log(data);
     
     return(
         <Link to={`/tournamentId/${data.tournamentId}`} state = {data} className={`${Styles.card} ${Styles.link}`}>
@@ -21,7 +23,7 @@ function TournamentCard({data}){
                 
                 <p>{data.tournamentDetails.description.slice(0,100)}...more</p>
             </div>
-            <p className={Styles.textCenter}>{data.tournamentDetails.pricePerSlot} / slot</p>
+            <p className={Styles.textCenter}>Price {data.tournamentDetails.pricePerSlot} / slot</p>
             <div className={Styles.detailsContainer}>
                 <p>Category : {data.tournamentType}</p>
                 <div className={Styles.textRight}>

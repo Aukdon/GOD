@@ -57,3 +57,17 @@
 .textRight{
     text-align: right;
 }
+
+
+@media screen and (max-width:1024px) {
+    .card {
+    
+        border: 1px solid #171717;
+        border-radius: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .imgContainer img {
+        width: 100px;
+    }
+}
