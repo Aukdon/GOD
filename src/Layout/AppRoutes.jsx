@@ -10,8 +10,10 @@ import TournamentDetails from "../Pages/TournamentDetails.jsx"
 import SignIn from "../Authentication/SignIn.jsx"
 import SignUp from "../Authentication/SignUp.jsx"
 import PasswordReset from "../Authentication/PasswordReset.jsx"
+import MyProfile from "../Pages/MyProfile.jsx"
 
 import ProtectedRouter from "../Authentication/ProtectedRoutes.jsx"
+
 
 function AppRoutes(){
     return(
@@ -25,6 +27,7 @@ function AppRoutes(){
                         <Route path="/hosttournament" element={<HostTournaments/>} />
                         <Route path="/hostplaygrounds" element={<HostPlaygrounds/>} />
                         <Route path="/tournamentId/:id" element={<TournamentDetails/>} />
+                        <Route path="/myprofile/" element={<MyProfile/>} />
                     </Route>
                     <Route path="/signin" element={<SignIn/>} />
                     <Route path="/signup" element={<SignUp/>} />

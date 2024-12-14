@@ -4,29 +4,20 @@ import {sidebarData} from "./SidebarData.js"
 import { hostData } from "./SidebarData.js"
 import PowerButtonIcon from "../../assets/icons/Power_Button.png"
 import ControlsIcon from "../../assets/icons/Controls.png"
-import { useState } from "react"
 
 function Sidebar(){
 
-    let [sidebarToggle, setSidebarToggle] = useState(true);
+    
 
     //Clear token to sign out user
     function handleSignOut(){
         localStorage.setItem("token", "")
     }
-
-    function handleClick(){
-        setSidebarToggle(!sidebarToggle);
-    }
     
     return(
         <>
 
-            <div className={Style.menuButton}>
-                <p onClick={handleClick}>Menu</p>
-            </div>
-
-            <div className={`${Style.sidebar} ${sidebarToggle?Style.displayBlock:Style.displayNone}`}>
+            <div className={`${Style.sidebar}`}>
 
                 {/* Displaying all sidebar list using map function */}
 

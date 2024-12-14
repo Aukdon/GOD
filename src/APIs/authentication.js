@@ -13,4 +13,18 @@ async function signInApi(payload){
     return data
 }
 
-export {signInApi}
+// Create a User
+
+async function signUpApi(payload){
+    let res = await fetch(`${url}/signup`, {
+        method:"POST",
+        headers: {
+            "Content-Type" : "application/json"
+        },
+        body: JSON.stringify(payload)
+    });
+    let data = await res.json();
+    return data
+}
+
+export {signInApi, signUpApi}

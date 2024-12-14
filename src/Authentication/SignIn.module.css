@@ -6,8 +6,8 @@ a {
 
 .formContainer {
     padding: 50px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 
 form {
@@ -59,4 +59,26 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width:720px) {
+    
+    .formContainer{
+        padding: 10px;
+        grid-template-columns: 1fr;
+        height: 100dvh;
+    }
+
+    .logoImg{
+        display: none;
+    }
+
+    form {
+        margin: 50px 0;
+        padding: 0;
+        display: grid;
+        gap: 20px;
+
+        justify-content: center;
+    }
 }

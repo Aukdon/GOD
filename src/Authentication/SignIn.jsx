@@ -25,19 +25,21 @@ function SignIn() {
         e.preventDefault();
         // console.log(userInput);
         let res = await signInApi(userInput);
-        console.log(res);
+        // console.log(res);
         dispatch({type:"signIn", token: res.token});
         localStorage.setItem("token",res.token)
         
         if(res.code == 1){
             location.replace("/tournaments");
+        }else{
+            alert("Check your credentials")
         }
     }
 
     return(
         <div className={Style.formContainer}>
-            <div>
-                <img src={godLogo} alt="Game Of Domination Logo" />
+            <div className={Style.logoImg}>
+                <img  src={godLogo} alt="Game Of Domination Logo" />
             </div>
            <form>
                 <p className={Style.title}>Sign In</p>
