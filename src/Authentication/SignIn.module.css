@@ -1,0 +1,84 @@
+
+a {
+    text-decoration: none;
+    color: #171717;
+}
+
+.formContainer {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+form {
+    margin: 50px;
+    padding: 50px;
+    display: grid;
+    gap: 20px;
+}
+
+.title {
+    text-align: center;
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+
+    border-radius: 7px;
+    border: 1px solid #171717;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 1px solid #171717;
+}
+
+button {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+.signIn button {
+    background-color: #824ACA;
+    color: #fff;
+}
+
+.signIn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:720px) {
+    
+    .formContainer{
+        padding: 10px;
+        grid-template-columns: 1fr;
+        height: 100dvh;
+    }
+
+    .logoImg{
+        display: none;
+    }
+
+    form {
+        margin: 50px 0;
+        padding: 0;
+        display: grid;
+        gap: 20px;
+
+        justify-content: center;
+    }
+}

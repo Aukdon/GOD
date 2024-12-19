@@ -1,0 +1,44 @@
+
+.layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: start;
+}
+
+.sidebarContainer{
+    position: sticky;
+    top: 0;
+
+    height: 100dvh;
+}
+
+.mobileMenu{
+    display: none;
+}
+
+@media screen and (max-width:720px) {
+    .layout{
+        grid-template-columns: 1fr;
+    }
+
+    .sidebarContainer{
+        display: none;
+    }
+
+    .content{
+        margin-bottom: 100px;
+    }
+
+    .mobileMenu{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        padding: 10px;
+
+        background-color: #824ACA;
+    }
+}
+

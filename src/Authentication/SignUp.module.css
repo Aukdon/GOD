@@ -1,0 +1,63 @@
+p {
+    margin: 0;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: grid;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.inputContainer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    justify-items: center;
+}
+
+.checkBoxInput{
+    display: flex;
+}
+
+.hostDetailsContainer {
+    display: none;
+}
+
+.signUp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUp button {
+    background-color: #824ACA;
+    color: #fff;
+}
+
+.signIn {
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button:hover {
+    border: 1px solid #171717;
+}
+
+@media screen and (max-width: 720px) {
+    .inputContainer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+}

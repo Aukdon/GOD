@@ -1,0 +1,41 @@
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.inputContainer{
+    display: grid;
+}
+
+.inputContainer > button {
+    background-color: #3B82F6;
+}
+
+.inputContainer > select {
+    max-width: 300px;
+}
+
+.span{
+    grid-column: span 3;
+}
+
+@media screen and (max-width:1280px) {
+    .form{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .span{
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .form{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .span{
+        grid-column: span 1;
+        width: 80%;
+    }
+}
